@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agência colors</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <header>
+
+    <div class="logo">
+    <!-- <p> <a href="index.html"> COL<span class="estilo">ORS</span> </a></p> -->
+    <p> <a href="index.html"><img src="img/logo.png" alt="Logotipo da agencia colors"></p></a>
+    </div>
+    <nav><ol>
+      <li><a href="#amarelo" title="">Amarelo</a></li>
+      <li><a href="#azul" title="">Azul</a></li>
+      <li><a href="#branco" title="">Branco</a></li>
+      <li><a href="#preto" title="">Preto</a></li>
+      <li><a href="#dualcolor" title="">Dual</a></li>
+    </ol></nav>
+
+  </header>
+  <main>
+    <section id="amarelo">
+      <div class="conteudo">
+      <h1>Produto</h1>
+      
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure eaque odio assumenda neque.</p>
+
+      <p><a href="#"  class="cta bt-verde-agua" title="">Veja Mais</a></p>
+    </div>
+      </section>
+
+    <section id="azul">
+      <div class="conteudo">
+      <h1>UI/UX Design</h1>
+      
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure eaque odio assumenda neque.</p>
+
+      <p><a href="#" class="cta" title="">Veja Mais</a></p>
+    </div>
+    </section>
+
+    <section id="branco">
+      <div class="conteudo">
+      <h1>Motion</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure eaque odio assumenda neque.</p>
+      <p><a href="#" class="bt-verde-agua cta">Veja Mais</a></p>
+    </div>
+    </section>
+      
+
+    <section id="preto">
+      <div class="conteudo">
+      <h1>Brand</h1>
+
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure eaque odio assumenda neque.</p>
+      <p><a href="#" class="cta">Veja Mais</a></p>
+    </div>
+    </section>
+
+    <section id="dualcolor">
+      <div class="conteudo">
+      <h1>Print</h1>
+
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure eaque odio assumenda neque.</p>
+      <p><a href="#" class="cta">Veja Mais</a></p>
+    </div>
+    </section>
+    <div class="whats">
+     <a href="https://api.whatsapp.com/send?phone=5511993327692&text=Posso%20ajudar%3F" target="_blank" title="Mensagem via whatsApp"> <img src="img/logozap.png" alt="logo WhatsApp"></a>
+    </div>
+
+  </main>
+
+
+
+  <!-- JAva script para criação do botão do whatsapp
+  
+  site: https://materiais.resultadosdigitais.com.br/botao-de-whatsapp-gratuito
+  -->
+  <!-- <script>window.rwbp={email:'tiagoferreira18@gmail.com',phone:'+5511993327692',message:'Fale conosco',lang:'pt-BR'}</script><script defer async src='https://duz4dqsaqembt.cloudfront.net/client/whats.js'></script> -->
+
+  <!-- <script src="js/idade.js"></script> -->
+  <script src="js/acessibilidade.js"></script>
+  
+<!-- Barra de acessibilidade -->
+<div class="acessibilidade">
+<div class="lado">
+<button onclick="tamTexto(-4)">-</button>
+<button onclick="tamTexto(+4)">+</button>
+</div>
+<button onclick="tamTexto(18)" id="reset">Reset</button>
+</div>
+  <script>
+    let fonte = 18;
+
+
+    // Definindo a função que muda o tamanho do texto
+    function tamTexto(contador){
+      if(contador == 18){
+        fonte = contador;
+      }else{
+        fonte += contador
+      }
+
+      /* Limitando o tamanho */
+      if(fonte >=50){
+        fonte = 50
+      }else if(fonte < 8){
+        fonte = 8
+      }
+      //Definindo o tamanho da fonte no conteudo
+      document.querySelector('body').style.fontSize = fonte + 'px'
+    }
+  </script>
+
+
+
+</body>
+</html>

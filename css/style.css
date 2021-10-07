@@ -1,0 +1,380 @@
+/* RESET CSS*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Oswald&display=swap');
+
+/*
+Texto corrido: font-family: 'Merriweather', serif;
+Título: font-family: 'Oswald', sans-serif;
+*/
+
+/* Regras de uso geral(Sem media queries) */
+/* Ajuste do box model pra tudo */
+*, *::after, *::before {box-sizing: border-box;} /* Usar dessa forma */
+
+/* imagens responsivas */
+img, iframe{max-width: 100%;}
+
+
+/* reset dos espaços padroes do navegador */
+body, h1, h2, h3, figure, a{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  
+       
+}
+
+html{
+  font-size: 18px;
+  font-family: 'Merriweather', serif;
+  scroll-behavior: smooth; /* Comportamento de rolagem */
+
+  /* ajustando o problema de ancora comendo os titulos */
+  scroll-padding-top: 70px;
+
+}
+
+/* Acessibilidade */
+#acessibilidade button{
+  background-color:#282C2F;
+  color: #EEF5FD;
+  font-weight: bold;
+  font-size: 0.5rem;
+  margin-left: 10px;
+}
+
+
+
+#acessibilidade{
+  /* border: solid 1px black; */
+  display: flex;
+  /* justify-content: right; */
+  height: 4.5vh;
+  font-size: 0.8rem;
+  margin-right: 10px;
+}
+
+/* Fim da acessibilidade */
+
+
+/* Cabeçalho */
+
+
+header{
+  /* display: flex; */
+  /* justify-content: space-around; */
+  /* border: solid 1px black; */
+  text-align: center;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20vh;
+ 
+
+}
+
+.logo{
+  font-family: 'Osvald', sans-serif;
+  font-weight: 600;
+  width: 150px;
+  margin: auto;
+ 
+}
+
+nav ol{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 20px;
+  margin: 0;
+  padding: 0;
+  
+    /* border: 1px solid black; */
+     
+}
+
+
+nav ol li a:hover, nav ol li a:focus, nav ol li a:active{
+  background-color: #26CCCA;
+  font-weight: bold;
+  color: #EEF5FD;
+  border-bottom: 4px solid #FFEE3C;
+}
+
+nav ol li a{
+  padding: .5rem .7rem;
+  color: #282C2F;
+  transition: 1s;
+  font-family: 'Osvald', sans-serif;
+   
+}
+
+
+p a{
+  /* border: 1px solid black; */
+  color: #282C2F;
+}
+
+
+h2{
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+
+#preto p{
+  color: #EEF5FD;
+}
+
+.estilo{
+ color: #26CCCA;
+}
+
+section{
+  height: 73vh;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding-top: 100px;
+  
+ 
+  
+}
+
+  .conteudo{
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+  }
+  section h1{
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  section p{
+    line-height: 1.9rem; /* Espaçamento entre as linhas */
+  }
+
+/* Formatando os botoes da section */
+.cta{
+  font-family: 'oswald', sans-serif;
+  letter-spacing: 3px; /* Comando para afastar as letras */
+  font-size: .8rem;
+  font-weight: 600;
+  padding: 1.15rem 1.7rem;
+  background-color: #FFEE3C;
+  line-height: 5.5rem;
+  color: #282C2F;
+}
+
+  .cta::before{
+    content: "+";
+    margin-right: .8rem;
+    font-weight: 600;
+  }
+
+/* Classe para deixar botao verde agua */
+.bt-verde-agua{
+  background-color: #26CCCA;
+  color: #EEF5FD;
+
+}
+
+
+
+#amarelo{
+  background-image: url(../img/amarelo.png);
+  background-size: cover;
+  background-position-x: center;
+}
+
+#azul{
+  background-image: url(../img/azul.png);
+  background-size: cover;
+  color: #EEF5FD;
+   
+}
+
+#branco{
+  background-color: #EEF5FD;
+  background-image: url(../img/balao.png);
+  background-size: cover;
+  background-position-x: center;
+  
+}
+#preto{
+  background-image: url(../img/preto.png);
+  color: #EEF5FD;
+  background-size: cover;
+  
+}
+
+/* Colocar uma imagem com duas cores */
+#dualcolor{
+  background-image: url(../img/azuleamarelo.png);
+  background-size: cover;
+  background-position-x:center;
+  color: #EEF5FD;
+
+}
+
+/* Fazendo o botão do whats flutuar */
+.whats{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  filter: drop-shadow(3px 3px 20px); /* sombras */
+  
+}
+
+
+.centraliza{
+  flex-direction: column;
+  justify-content: center;
+}
+
+.acessibilidade{
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 250px;
+  margin-top:10px;
+  margin-right: 5px;
+}
+button{
+  background-color: #26CCCA;
+  color: #282C2F;
+  font-weight: bold;
+  border: none;
+  padding: 5px 10px;
+  display: flex;
+  margin: 2px;
+}
+.lado{
+  display: flex;
+
+  
+}
+#reset{
+  margin: auto;
+  padding: 5px 10px;
+  margin-top: 2px;
+  background-color: #FFEE3C;
+  color: #282C2F;
+}
+
+/* Formtando para telas acima de 700 px */
+@media screen and (min-width:600px){
+
+  body{
+    background-color: #FFEE3C;
+  }
+  header{
+    display: flex;
+    justify-content: space-around;
+    /* border: solid 1px black; */
+    height: 10vh;
+  }
+  .logo{
+    /* background-color: #f0f; */
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ol{
+    /* background-color: #26CCCA; */
+    padding-bottom: 0;
+    margin-top: 30px;
+  }
+
+  nav ol a{
+    font-size: 1.1rem;
+    padding: 0.7rem 1rem;
+  }
+  .conteudo{
+    width: 50%;
+    max-width: 800px;
+    margin: 0;
+    margin-left: 4rem;
+  }
+
+  section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding-top: 100px;
+    
+
+  section h1{
+    font-size: 5rem;
+    margin-bottom: .8rem;
+  }
+
+  #amarelo, #branco, #dualcolor{
+    background-attachment: fixed;
+  }
+
+
+  /* botao */
+
+.cta{
+  position: relative;
+  display: inline-block;
+  line-height: 1.5rem;  
+  z-index: 1;
+  } 
+
+.cta:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #282C2F;
+  transition: all 0.9s ease;
+}
+
+.cta:hover{
+  color: #EEF5FD;
+}
+
+
+.cta:hover:after {
+  left: 0;
+  width: 100%;
+}
+
+/* header */
+
+header{
+  z-index: 2;
+}
+
+
+/* LIÇÃO DE CASA
+
+-Formatar header - mais
+-Botão (animação) - ok
+-colocar o botão para o chat (whatsapp)
+-Fazer rolagem suave entre as sections
+-Deixar o menu fixo no topo - ok
+-Fazer alguma coisa com JS - json neste site
+
+*/
+
+/* Formatar header
+
+Botão (animação) - ok
+
+colocar o botão para o chat (whatsapp) - ok
+
+Fazer rolagem suave entre as sections - pk
+
+Deixar o menu fixo no topo - ok 
+
+Fazer alguma coisa com JS neste site - ok
+ */

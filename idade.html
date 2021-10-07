@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1{
+      text-align: center;
+    }
+    form{
+      padding: 30px;
+      text-align: center;
+      border: 1px solid black;
+    }
+    p{
+      text-align: center;      color: red;
+      font-weight: bold;
+    }
+
+    </style>
+</head>
+<body>
+  <h1>Formulario para entrar no site</h1>
+  <form action="">
+  <label for="name">Digite o ano de nascimento</label>
+  <input type="number" name="data" id="data">
+  <button type="submit" id="botao">Entrar</button>
+  
+</form>
+<p></p>
+
+    <script>
+     console.log('cheguei aqui');
+     const data = document.getElementById('data')
+     const botao = document.querySelector('#botao')
+     const paragrafo = document.querySelector('p') 
+
+    //  dataAtual.getFullYear()
+    
+
+    //  console.log(typeof dataAtual);
+     console.log(typeof botao);
+
+    /* Data e hora atual */
+    now = new Date;
+    console.log(now);
+    ano = now.getFullYear()
+
+    console.log(ano);
+
+      botao.addEventListener('click',function(event){
+        event.preventDefault()
+        let dat = Number(data.value)
+        idade = ano - dat
+        if(idade < 18){
+         paragrafo.textContent=("Infelizmente sua idade não permite acesso ao nosso conteúdo")
+  
+        }else{
+          window.location.href = "http://127.0.0.1:5500/index.html";
+        }
+                      
+      // window.location.href = "http://127.0.0.1:5500/index.html";
+       
+      })
+
+
+    </script>
+
+
+</body>
+</html>

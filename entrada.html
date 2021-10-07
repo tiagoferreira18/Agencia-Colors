@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sites profissionais responsivos, loja virtual, UX Design - Agência Colors</title>
+
+    <meta name="description" content="Somos a Agência Colors, informe sua idade.">
+
+    <meta name="keywords" content="site, site responsivo">
+
+
+
+    <!-- FAVICON -->
+
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
+
+
+
+    <!-- CSS EXTERNO -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <section class="centraliza">
+
+        <h2>Verificação de Idade</h2>
+
+        <p>Informe o ano do seu nascimento para verificarmos se nosso conteúdo é apropriado.</p>
+
+    </section>
+
+    <script>
+      /* O básico mal feito */
+      /* let nasc = prompt("Digite o ano do seu nascimento com 4 digitos")
+      document.write("<br>Você tem " + (2021-nasc)+ " anos.") */
+
+      //outro exemplo
+
+/*       let nasc = prompt('Digite o ano de seu nascimento com 4 digitos')
+      let anoAtual = new Date().getFullYear()
+      document.write(`Você tem ${anoAtual-nasc} anos.`) */
+
+      /* adicionando uma condicional que verifica se o usuario é maior de idade e executa algo de acordo com essa resposta */
+      let nasc = prompt('Digite o ano do seu nascimento com 4 digitos')
+      let anoAtual = new Date().getFullYear()
+      let idade = anoAtual - nasc
+
+      if(idade < 18){
+        document.write(`Voce ainda não tem idade para acessar a agencia colors`)
+      }else{
+        document.write(`Voce esta sendo redirecionado para o nosso conteúdo.`)
+        setTimeout(function(){
+          document.location.href = 'index.html'
+        }, 3000)
+        
+      }
+    </script>
+
+</body>
+
+</html>
